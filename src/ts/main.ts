@@ -2,10 +2,10 @@ let game = new Phaser.Game()
 
 let bootState = {
     preload: function(){
-
+        game.load.image('background', 'assets/images/background.png')
     },
     create: function(){
-
+        game.state.start('loader')
     }
 }
 
@@ -17,6 +17,6 @@ window.onload = () => {
     game.scale.scaleMode = Phaser.ScaleManager.NO_SCALE
     game.scale.pageAlignHorizontally = true
     game.scale.pageAlignVertically = true
-    
+
     game.state.start('boot')
 }

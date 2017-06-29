@@ -1,8 +1,10 @@
 var game = new Phaser.Game();
 var bootState = {
     preload: function () {
+        game.load.image('background', 'assets/images/background.png');
     },
     create: function () {
+        game.state.start('loader');
     }
 };
 game.state.add('boot', bootState);
