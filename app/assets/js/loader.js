@@ -17,7 +17,9 @@ var loaderState = {
         game.load.image('wall', 'assets/images/wall.png');
         game.load.spritesheet('coin', 'assets/images/coin.png', 20, 20);
         game.load.spritesheet('lava', 'assets/images/lava.png', 20, 20);
+        game.load.json('levels', 'assets/data/levels.json');
     },
     create: function () {
+        game.state.start('game');
     }
 };
