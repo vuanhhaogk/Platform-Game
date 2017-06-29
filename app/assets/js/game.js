@@ -128,6 +128,7 @@ var gameState = {
         coin_tween.onComplete.addOnce(function () {
             coin.kill();
             if (_this.target === 0) {
+                _this.target = -1;
                 if (game.cache.getJSON('levels')[game.global.level + 1]) {
                     game.global.level++;
                     game.state.start('game');

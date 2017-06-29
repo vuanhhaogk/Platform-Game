@@ -151,6 +151,7 @@ let gameState = {
             coin.kill()
 
             if (this.target === 0){
+                this.target = -1
                 if (game.cache.getJSON('levels')[game.global.level + 1]){
                     game.global.level ++
                     game.state.start('game')
