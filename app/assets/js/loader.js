@@ -1,9 +1,9 @@
 var loaderState = {
     preload: function () {
         game.add.sprite(0, 0, 'background');
-        game.add.sprite((game.camera.width - 300)/2, (game.camera.height - 20)/2, 'loader_bg')
-        let cur = game.add.sprite((game.camera.width - 300)/2, (game.camera.height - 20)/2, 'loader_cur')
-        game.load.setPreloadSprite(cur)
+        game.add.sprite((game.camera.width - 300) / 2, (game.camera.height - 20) / 2, 'loader_bg');
+        var cur = game.add.sprite((game.camera.width - 300) / 2, (game.camera.height - 20) / 2, 'loader_cur');
+        game.load.setPreloadSprite(cur);
         game.load.image('player', 'assets/images/player.png');
         game.load.image('trap', 'assets/images/trap.png');
         game.load.image('door', 'assets/images/door.png');

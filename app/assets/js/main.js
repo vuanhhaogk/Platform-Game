@@ -12,6 +12,7 @@ var bootState = {
 game.state.add('boot', bootState);
 game.state.add('loader', loaderState);
 game.state.add('game', gameState);
+game.state.add('menu', menuState);
 game.global = {
     level: 0
 };

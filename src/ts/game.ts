@@ -46,6 +46,9 @@ let gameState = {
         this.info = info
     },
     create: function(){
+        // setup
+        localStorage.setItem('platform-last-level', game.global.level)
+        
         // world
         game.world.setBounds(0, 0, 2000, 2000)
         game.add.sprite(0, 0, 'background').fixedToCamera = true
@@ -164,7 +167,7 @@ let gameState = {
     pressSpace: function(){
         if (this.mode !== 'pause' && this.mode !== 'play')
             return
-            
+
         if (this.mode === 'pause'){
             this.mode = 'play'
             this.info.message = ''

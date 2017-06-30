@@ -37,6 +37,8 @@ var gameState = {
     },
     create: function () {
         var _this = this;
+        // setup
+        localStorage.setItem('platform-last-level', game.global.level);
         // world
         game.world.setBounds(0, 0, 2000, 2000);
         game.add.sprite(0, 0, 'background').fixedToCamera = true;
