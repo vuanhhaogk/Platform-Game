@@ -20,7 +20,7 @@ Good luck for you!
 $ git clone https://github.com/vuanhhaogk/Platform-Game.git
 $ cd Platform-Game
 [...Platform-Game] $ npm i
-[...Platform-Game] $ npm gulp watch
+[...Platform-Game] $ gulp watch
 ```
 
 ## License
