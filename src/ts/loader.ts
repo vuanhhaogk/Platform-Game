@@ -10,8 +10,9 @@ let loaderState = {
         game.load.image('wall', 'assets/images/wall.png')
         game.load.image('intro', 'assets/images/intro.png')
         game.load.image('button', 'assets/images/button.png')
-        game.load.spritesheet('coin', 'assets/images/coin.png', 20, 20)
-        game.load.spritesheet('lava', 'assets/images/lava.png', 20, 20)
+        game.load.image('help', 'assets/images/help.png')
+        game.load.spritesheet('coin', 'assets/images/coin.png', 12, 12)
+        game.load.spritesheet('lava', 'assets/images/lava.png', 20, 18)
 
         game.load.json('levels', 'assets/data/levels.json')
     },

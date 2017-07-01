@@ -48,7 +48,7 @@ let gameState = {
     create: function(){
         // setup
         localStorage.setItem('platform-last-level', game.global.level)
-        
+
         // world
         game.world.setBounds(0, 0, 2000, 2000)
         game.add.sprite(0, 0, 'background').fixedToCamera = true
@@ -100,7 +100,7 @@ let gameState = {
                         this.player.y = y
                         break
                     case 'L':
-                        let lava = this.lavas.create(x, y, 'lava')
+                        let lava = this.lavas.create(x, y + 2, 'lava')
                         lava.animations.add('wave', [0, 1, 2, 3], 2, true)
                         lava.animations.play('wave')
                         lava.body.immovable = true
@@ -127,6 +127,7 @@ let gameState = {
         this.cursors = game.input.keyboard.createCursorKeys()
         game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onDown.add(this.pressSpace, this)
         game.input.keyboard.addKey(Phaser.Keyboard.R).onDown.add(() => game.state.start('game'), this)
+        game.input.keyboard.addKey(Phaser.Keyboard.ESC).onDown.add(() => game.state.start('menu'), this)
 
         // mode
         this.mode = 'preplay'

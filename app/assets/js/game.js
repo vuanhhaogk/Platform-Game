@@ -79,7 +79,7 @@ var gameState = {
                         this.player.y = y;
                         break;
                     case 'L':
-                        var lava = this.lavas.create(x, y, 'lava');
+                        var lava = this.lavas.create(x, y + 2, 'lava');
                         lava.animations.add('wave', [0, 1, 2, 3], 2, true);
                         lava.animations.play('wave');
                         lava.body.immovable = true;
@@ -105,6 +105,7 @@ var gameState = {
         this.cursors = game.input.keyboard.createCursorKeys();
         game.input.keyboard.addKey(Phaser.Keyboard.SPACEBAR).onDown.add(this.pressSpace, this);
         game.input.keyboard.addKey(Phaser.Keyboard.R).onDown.add(function () { return game.state.start('game'); }, this);
+        game.input.keyboard.addKey(Phaser.Keyboard.ESC).onDown.add(function () { return game.state.start('menu'); }, this);
         // mode
         this.mode = 'preplay';
         this.info.message = "Level: " + (game.global.level + 1);
